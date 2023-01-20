@@ -1,4 +1,9 @@
 
+requirements
+- node.js
+- visual studio code
+
+
 create repo. at hisarms96@puts.ac.kr   / nomad_typechain
 
 
