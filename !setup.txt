@@ -78,3 +78,16 @@ package.json
 
 
 $ npm run dev
+
+
+
+
+
+Implement Blocks...
+
+we have to use crypto package, but has no type definition file
+we can get it from https://github.com/DefinitelyTyped/DefinitelyTyped
+
+and install it like this: (installing all node related type definitions)
+
+$ npm install -D @types/node
