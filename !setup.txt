@@ -1,0 +1,80 @@
+
+create repo. at hisarms96@puts.ac.kr   / nomad_typechain
+
+
+~/nomacoders/typechain/
+
+$ git init
+$ git config --global user.name "sciwoong"
+$ git config --global user.email "hisarms@puts.ac.kr"
+$ git remote add origin git@github.com:hisarms96/nomad_typechain.git
+
+
+$ npm init
+$ npm install -y
+
+
+open package.json   delete "main" line
+
+
+ "scripts" > "test"
+ -->
+ "scripts": {
+    "build":"tsc"
+  },
+
+$ npm install -D typescript
+
+$ touch tsconfig.json
+
+open tsconfig.json
+
+  {
+
+    "include": ["src"],
+    "compilerOptions": {
+      "outDir": "build"
+    }
+
+  }
+
+
+
+$ mkdir src
+$ touch src/index.ts
+
+open src/index.ts
+
+  const hello = () => "hi";
+
+
+$ npm run build
+
+build folder was automatically created,
+and src/index.ts -->compiled --> build/index.js
+
+
+
+REFER TO LASTEST
+
+  tsconfig.json
+  package.json
+
+#to run script w/o build
+$ npm install -D ts-node
+
+$ npm install nodemon
+
+package.json 
+-----------------------------------------------
+  ...
+  "scripts": {
+      "build": "tsc",
+      "dev": "nodemon --exec ts-node src/index.ts",
+      "start": "node build/index.js"
+    },
+  ...
+-----------------------------------------------
+
+
+$ npm run dev
